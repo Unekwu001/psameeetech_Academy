@@ -1,0 +1,281 @@
+{% extends 'user-dashboard.html'%}
+
+{% block header %}
+Here is what you Submitted, its cool right ? 
+{% endblock header %}
+
+{% block style %}
+	<style>
+		select,input{
+		width:30vw;border-color:grey
+		}
+		
+		#checkbox{
+		width:1vw
+		}
+		.shortinput{width:5vw
+		}
+	</style>
+{% endblock style %}
+
+{% block content %} 
+{% if record %}
+    <main class="app-content col-12" style="margin-left:-1vw;margin-top:-1vh">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="row">
+              <div class="col-lg-12">
+              
+               <form method="post" action="">
+                  <div class="form-group">
+                    <label for="exampleInputfirst">First name</label>
+                    <input required="required" name="fname"class="form-control" id="exampleInputfirst" type="text" aria-describedby="textHelp" placeholder="Enter firstname" disabled="disabled"value="{{record.fname}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputsurname">Lastname (surname)</label>
+                    <input required="required" name="lname"class="form-control" id="exampleInputsurname" type="text" aria-describedby="textHelp" placeholder="Enter Lastname"disabled="disabled"value="{{record.lname}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputmiddle">Middle name</label>
+                    <input required="required" name="midname"class="form-control" id="exampleInputmiddle" type="text" aria-describedby="textHelp" placeholder="Enter Middle name"disabled="disabled"value="{{record.midname}}">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Mobile number</label>
+                    <input required="required" class="form-control" id="exampleInputPassword1" type="type" placeholder="your phone number.." name="phone"disabled="disabled"value="{{record.phone}}">
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select required="required" class="form-control" id="gender"name="gender"disabled="disabled">
+                    	<option "value="{{record.gender}}">{{record.gender}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="maritalstatus">Marital status</label>
+                    <select required="required" class="form-control" id="maritalstatus" name="marital"disabled="disabled">
+                    	<option>{{record.marital}}</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="selectprogram">Select Your Programme of choice</label>
+                    <select required="required" class="form-control" id="selectprogram" name="program"disabled="disabled">
+                    <option>{{record.program}}</option>
+                       
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="manualpro"style="color:orange"></label>
+                    <input required="required" class="form-control" id="manualpro" type="text" name="manualpro"disabled="disabled" value="{{record.manualpro}}">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="studymode">Mode of Study</label>
+                    <select required="required" class="form-control" id="studymode" name="studymode"disabled="disabled">
+                   	 <option> {{record.studymode}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="stateofres">State of residence</label>
+                      <select required="required" class="form-control" id="stateofres" type="text"disabled="disabled">
+                      	<option>{{record.stateofres}}</option>
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="lgaofres">LGA of residence</label>
+                      	<input required="required" class="form-control" id="lgaofres" type="text"disabled="disabled"value="{{record.lgaofres}}">
+                    </fieldset>
+                  </div>
+                   <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="cityofres">Town/City of residence</label>
+                      <input required="required" class="form-control" id="cityofres" type="text" placeholder="Enter your town/city of residence"disabled="disabled"value="{{record.cityofres}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Your address</label>
+                    <textarea required="required" class="form-control" id="address" rows="3" name="address"disabled="disabled">{{record.resaddress}}</textarea>
+                  </div>
+                   
+                  
+              <div class="col-lg">
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="demoDate">Date of birth</label>
+                      <input required="required" class="form-control" id="demoDate" type="text" placeholder="Select Date"disabled="disabled" value="{{record.dob}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="placeofbirth">Place of birth</label>
+                      <input required="required" class="form-control" id="placeofbirth" type="text" placeholder="Place of birth"disabled="disabled"value="{{record.placeofbirth}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="nationality">Nationality</label>
+                      <select required="required" class="form-control" id="nationality"  name="nationality"disabled="disabled">
+                      		<option value="nigerian">{{record.nationality}}</option>
+                      		
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="stateoforigin">State of origin</label>
+                      <select required="required" class="form-control" id="stateoforigin"  name="stateoforigin"disabled="disabled">
+                      		<option value="nigerian">{{record.stateoforigin}}</option>
+                      
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="lga">Local Government Area</label>
+                      <input required="required" class="form-control" id="lga"  name="lga" Placeholder="Enter your LGA of origin"disabled="disabled"value="{{record.originlga}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="hometown">Home town</label>
+                      <input required="required" class="form-control" id="hometown"  name="hometown" placeholder="Enter your home town"disabled="disabled"value="{{record.hometown}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="nxtofkin">Name of Next of kin</label>
+                      <input required="required" class="form-control" id="nxtofkin" type="text" name="nxtofkin" placeholder="Enter the name of your next of kin"disabled="disabled"value="{{record.nxtofkin}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="nxtofkinphone">Next of kin phone number</label>
+                      <input required="required" class="form-control" id="nxtofkinphone" type="number"  name="nxtofkinphone" placeholder="Enter next of kin phone number"disabled="disabled"value="{{record.nxtofkinphone}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="hometown">What relationship do you have with your next of kin</label>
+                      <select required="required"class="form-control" id="hometown"  name="hometown"disabled="disabled">
+                      	<option value="mother">{{record.relwithkin}}</option>
+                      	 
+                      </select>
+                    </fieldset>
+                  </div>
+                   
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="cardtype">Scratch card examination type</label>
+                      <select required="required" class="form-control" id="cardtype"  name="cardtype"disabled="disabled">
+                      <option>{{record.scardexamtype}}</option>
+                      	 
+                      </select>
+                    </fieldset>
+                  </div>
+                     <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="cardyear">Scratch card year</label>
+                      <select required="required" class="form-control" id="cardyear"  name="cardyear"disabled="disabled">
+                      <option>{{record.cardyear}}</option>
+                       
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="serialnum">Scratch card serial number</label>
+                      <input required="required" class="form-control" id="serialnum" type="number"  name="serialnum" placeholder="Enter scratch card serial number"disabled="disabled"value="{{record.cadserialnumber}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="cardpin">Scratch card pin</label>
+                      <input required="required" class="form-control" id="cardpin" type="number"  name="cardpin" placeholder="Enter scratch card pin"disabled="disabled"value="{{record.cardpin}}">
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <fieldset>
+                      <label class="control-label" for="resultcombo">Number of result combination</label>
+                      <select required="required" class="form-control" id="resultcombo"  name="resultcombo"disabled="disabled">
+                      <option>{{record.resultcombo}}</option>
+                       
+                      </select>
+                    </fieldset>
+                  </div>
+                  {% endif %}
+                  
+                  {% if orecord %}
+                  <div class="form-group"><h5>SSCE/O LEVEL DATA</h5>
+                  	<br>
+                  	{{orecord[0].subject}} &nbsp;<select required="required" name="maths" class="form-control-sm"disabled="disabled">
+                  			<option value="">{{orecord[0].score}}</option>
+                  			 
+                  		</select><br>
+                 
+                  	
+                  	{{orecord[1].subject}}	<select required="required" name="english"class="form-control-sm"disabled="disabled">
+                  			<option>{{orecord[1].score}}</option>
+                  			 
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[2].subject}}"class="form-control-sm"placeholder="subject 3"><select name=""class="form-control-sm"required="required"disabled="disabled">
+                  			 
+                  			<option>{{orecord[2].score}}</option>
+                  			 
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[3].subject}}"placeholder="subject 4"class="form-control-sm"><select name=""class="form-control-sm"required="required"disabled="disabled">
+                  			 
+                  			<option>{{orecord[3].score}}</option>
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[4].subject}}"placeholder="subject 5"class="form-control-sm"><select name=""class="form-control-sm"required="required"disabled="disabled">
+                  			<option value="">{{orecord[4].score}}</option>
+                  			 
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[5].subject}}"placeholder="subject 6"class="form-control-sm"><select name=""class="form-control-sm"required="required"disabled="disabled">
+                  			<option>{{orecord[5].score}}</option>
+                  			 
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[6].subject}}"placeholder="subject 7"class="form-control-sm"><select name=""class="form-control-sm"required="required"disabled="disabled">
+                  			<option>{{orecord[6].score}}</option>
+                  			 
+                  		</select><br>
+                  <input disabled="disabled" required="required" type="text"value="{{orecord[7].subject}}"placeholder="subject 8"class="form-control-sm"><select name=""class="form-control-sm"disabled="disabled">
+                  			<option>{{orecord[7].score}}</option>
+                  		 
+                  		</select><br>
+                  <input disabled="disabled" required="required"type="text"value="{{orecord[8].subject}}"placeholder="subject 9"class="form-control-sm"><select name=""class="form-control-sm"disabled="disabled">
+                  			<option>{{orecord[8].score}}</option>
+                  			 
+                  		</select><br>
+ 
+                  </div>
+                  {% endif %}
+                  
+                  {% if jrecord %}
+                   <div class="form-group"><h5>UTME JAMB DATA</h5>
+                  	<br>
+                  	
+                  	{{jrecord[0].subject}} &nbsp;&nbsp; <input disabled="disabled" type="number" placeholder="score"class="form-control-sm form-group"required="required"value="{{jrecord[0].score}}"><br>
+                  	<input disabled="disabled" type="text" name=""class="shortinput form-group" placeholder="subject"required="required"value="{{jrecord[1].subject}}"><input type="number"placeholder="score"class="form-group form-control-sm"required="required"disabled="disabled"value="{{jrecord[1].score}}"><br>
+                  	<input name=""class="shortinput form-group"placeholder="subject"required="required" type="text"disabled="disabled"value="{{jrecord[2].subject}}"><input type="number"placeholder="score"class="form-group form-control-sm"required="required"disabled="disabled"value="{{jrecord[2].score}}"><br>
+                  	<input name=""class="shortinput form-group"placeholder="subject" required="required" type="text"disabled="disabled"value="{{jrecord[3].subject}}"><input type="number"placeholder="score"class="form-group form-control-sm"required="required"disabled="disabled"value="{{jrecord[3].score}}" ><br>
+                  
+                  <label style="margin-top:-1vh">Total UTME/JAMB</label><br>
+                  <input type="button"placeholder="score"class="form-control-sm form-group"return="false"required="required"disabled="disabled"value="{{jrecord[4].score}}"><br>
+                </div>
+                {%endif%} 
+              
+                </form>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    {%endblock content %}
+     

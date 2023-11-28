@@ -1,0 +1,43 @@
+{% extends 'user-dashboard.html'%}
+
+{% block header %}
+Oops !. Something went wrong. 
+{% endblock header %}
+
+{% block style %}
+	<style>
+		select,input{
+		width:30vw;border-color:grey
+		}
+		
+		#checkbox{
+		width:1vw
+		}
+		.shortinput{width:5vw
+		}
+	</style>
+{% endblock style %}
+
+{% block content %} 
+    <main class="app-content col-12" style="margin-left:-1vw;margin-top:-1vh">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="row">
+              <div class="col-lg-12">
+ 
+                  <div class="tile-footer"style="text-align:center">
+              		<span style="background-color:rgb(0,150,136);color:white;padding:1%">Oops !, Something went wrong.</span>
+              		<img src="/static/img/wentwrong.png" class="img-fluid"style="height:50vh;text-align:center">
+            	</div>
+             
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <marqueue>sgg</marqueue>
+    </main>
+    {%endblock content %}
+     

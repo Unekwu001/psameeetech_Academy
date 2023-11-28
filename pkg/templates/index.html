@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block title %}
+     <title>Welcome to Psameeetech Academy</title>
+{% endblock %}
+<!--
+
+DIGITAL TREND
+
+https://templatemo.com/tm-538-digital-trend
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="Psameeetech is the best Business Center in Federal Polytechnic Nasarawa, Nasarawa State. Situated behind the school library, Psameetech helps students (both new and old) with admission form buying and registration amongst other discerning requests from student clients">
+     <meta name="keywords" content="Nasarawa, fed poly nas, federal polytechnic nasarawa, business centerin fpn">
+     <meta name="author" content="Theophilus Unekwuojo Shaibu">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/static/css/aos.css">
+     <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="/static/css/index.css">
+
+</head>
+<body>
+
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg"style="position:sticky;top:0px">
+        <div class="container">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+            <img src="/static/img/psam.jpg" alt="psameeetech logo"class="img-fluid"style="border-radius:20px;height:10vh;width:5vw" 
+            id= "mainlogo">
+              <i class="fa fa-line-chart"></i>
+              Psameeetech Academy
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link smoothScroll">Testimonials</a>
+                    </li>
+                     
+                    <li class="nav-item">
+                        <a href="#contactus" class="nav-link contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{%block content%}
+     <!-- HERO -->
+     <section class="hero hero-bg d-flex justify-content-center align-items-center">
+               <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                        {%set m = get_flashed_messages()%}
+                        {% for i in m %}
+                        <h2 style="color:orange;">{{i}}</h2>
+                        {% endfor %}
+                              <div class="hero-text">
+
+                                   <h2 class="text-white" data-aos="fade-up">Are you a prospective student of Federal 
+                                   	Polytechnic Nasarawa ?</h2>
+                                   <h4 class="text-white" data-aos="fade-up">Let us help you buy and process your admission form!</h4>
+
+                              <a href="{{url_for('user_reg')}}" target="_blank"class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">
+                                    Click here to start </a>
+                                   
+
+                                   <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i 
+                                   class="fa fa-phone mr-2"></i> +2347068285967</strong>
+                              </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                          <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+
+                            <img src="/static/images/working-girl.png" class="img-fluid" alt="working girl">
+                          </div>
+                        </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section class="about section-padding pb-0" id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-7 mx-auto col-md-10 col-12">
+                         <div class="about-info">
+
+                              <h2 class="mb-4" data-aos="fade-up">About<strong> Psameeetech Academy</strong></h2>
+
+                              <p class="mb-0" data-aos="fade-up"> Psameeetech Academy is a reliable business center located within the
+                               premises of the Federal Polytechnic Nasarawa, Nasarawa State, Nigeria.
+                              <br><br>Situated behind the school library, Psameetech helps students (both new and old) with admission 
+                              form buying and registration amongst other discerning requests from student and other clients.</p>
+                         </div>
+
+                         <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+
+                          <img src="/static/images/office.svg" class="img-fluid mt-4" alt="office"style="height:50vh;">
+                          
+                        </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- PROJECT -->
+     <section class="project section-padding" id="project">
+          <div class="container-fluid">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">
+
+                        <h2 class="mb-5 text-center" data-aos="fade-up">
+                            Happy
+                            <strong>Clients</strong>
+                        </h2>
+
+                         <div class="owl-carousel owl-theme" id="project-slide">
+                              <div class="item project-wrapper" data-aos="fade-up" data-aos-delay="100">
+                                   <img src="/static/images/project/user.png" class="img-fluid" alt="project image"
+                                   style="height:62vh">
+
+                                   <div class="project-info">
+                                        
+
+                                        <h3>
+                                             
+                                                  <span>Theophilus Shaibu - ND SLT 2021/2022</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                            
+                                        </h3>
+                                        <span class="mt-3">"They processed my form within 2hours. Am so happy."</span>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="/static/images/project/1.svg" class="img-fluid" alt="project image"style="height:62vh">
+
+                                   <div class="project-info">
+                                       
+
+                                        <h3>
+                                             
+                                                  <span>Anonymous - HNDII Business Administration 2021/2022</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                            
+                                        </h3>
+                                         <span class="mt-3">"I was in portharcourt and wanted to buy the admission form for Fed poly nas, i searched online and saw the Psameetech website. I was a little bit skeptical at first, but imediately i called the phone number on their site i received immediate response. To cut the long story short, i graduated from Nas poly last month. Thank you Psameeetech Academy. You guys should keep up the good work ."</span>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="/static/images/project/2.svg" class="img-fluid" alt="project image"style="height:62vh">
+
+                                   <div class="project-info">
+                                       
+
+                                        <h3>
+                                            
+                                                  <span>Emmanuel Adegbe - HNDII Computer Science 2016</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                            
+                                        </h3>
+                                        <span class="mt-3">"Their services are top notch. I always 
+                                                  go there for anything related to printing and lamination. Its their neat work for me"
+                                         </span>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="/static/images/project/3.svg" class="img-fluid" alt="project image"style="height:62vh">
+
+                                   <div class="project-info">
+                                      
+
+                                        <h3>
+                                            
+                                                  <span>Naomi Ochanya - HNDI MECH 2019</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                           
+                                        </h3>
+                                        <span class="mt-3">"I love their photocopies. Always clean."</span>
+                                   </div>
+                              </div>
+
+                              <div class="item project-wrapper" data-aos="fade-up">
+                                   <img src="/static/images/project/4.png" class="img-fluid" alt="project image"style="height:62vh">
+
+                                   <div class="project-info">
+                                       
+
+                                        <h3>
+                                            
+                                                  <span>Mustapha Usman NDI BT 2022</span>
+                                                  <i class="fa fa-angle-right project-icon"></i>
+                                                  
+                                             
+                                        </h3>
+                                        <span class="mt-3">"Anyone coming to Nasarawa 
+                                        should definitely try them out."</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+{%endblock%}
+	<!-- CONTACT -->
+     <section class="contact section-padding"id="contactus">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-6 mx-auto col-md-7 col-12 py-5 mt-5 text-center" data-aos="fade-up">
+
+                      <h1 class="mb-4">Hey there, Let's <strong>talk</strong> about <strong>What you </strong> want.</h1>
+
+                      <p> Send us a quick message.</a></p>
+                      <p>We are always <a rel="nofollow" href="https://unekwu.netlify.app/"> available </a><strong></strong> here.</p>
+                    </div>
+
+                    <div class="col-lg-8 mx-auto col-md-10 col-12">
+                    
+                
+                    
+                      <form action="{{url_for('messages')}}" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="300" role="form">
+                        <div class="row">
+                          <div class="col-lg-6 col-12">
+                            <input type="text" class="form-control" name="name" placeholder="Name" id = "name"required="required">
+                          </div>
+
+                          <div class="col-lg-6 col-12">
+                            <input type="email" class="form-control" name="email" placeholder="Email" id="email"required="required">
+                          </div>
+
+                          <div class="col-lg-12 col-12">
+                            <textarea class="form-control" rows="6" name="message" placeholder="Message" id="message"required="required"></textarea>
+                          </div>
+
+                          <div class="col-lg-5 mx-auto col-7">
+                            <button type="submit" class="form-control" id="submit-button" name="submit">Send Message</button>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+     <div class="google-map" data-aos="zoom-in">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3945.271993744758!2d7.7170549!3d8.5698244!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e29a51f84e49d%3A0xf3d9ebdc4f89fc3e!2sSchool%20library!5e0!3m2!1sen!2sng!4v1670340183448!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
+     
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">Speed<strong> Accuracy , and </strong> Reliability</h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Contact Info</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-phone mr-2 footer-icon"></i> 
+              +2347068285967
+            </p>
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                psameeetechacademy@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">Our Location</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+               Situated behind the school library, Federal Polytechnic Nasarawa, Nasarawa State, Nigeria.
+            </p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2022 Psameeetech Academy.
+            <br>
+            <a rel="nofollow noopener" href="https://unekwu.netlify.app">Designed by: Neku</a></p>
+          </div>
+
+         <!-- <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            
+            <ul class="footer-link">
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Work with us</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>-->
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-dribbble"></a></li>
+              <li><a href="#" class="fa fa-behance"></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+
+     <!-- SCRIPTS -->
+     
+     <script src="/static/js/jquery.min.js"></script>
+     <script src="/static/js/bootstrap.min.js"></script>
+     <script src="/static/js/aos.js"></script>
+     <script src="/static/js/owl.carousel.min.js"></script>
+     <script src="/static/js/smoothscroll.js"></script>
+     <script src="/static/js/custom.js"></script>
+
+</body>
+</html>

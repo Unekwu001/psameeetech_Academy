@@ -1,0 +1,48 @@
+{% extends 'user-dashboard.html'%}
+
+{% block header %}
+Whats the mistake you made ? The Admin is here to fix it.
+{% endblock header %}
+
+{% block style %}
+	<style>
+		select,input{
+		width:30vw;border-color:grey
+		}
+		
+		#checkbox{
+		width:1vw
+		}
+		.shortinput{width:5vw
+		}
+	</style>
+{% endblock style %}
+
+{% block content %} 
+    <main class="app-content col-12" style="margin-left:-1vw;margin-top:-1vh">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="row">
+              <div class="col-lg-12">
+ 		{%set m = get_flashed_messages()%}
+ 		{% for i in m %}
+ 		
+ 		<h2 style="color:red">{{i}}</h2>
+ 		
+ 		{% endfor %}
+                  <div class="tile-footer"style="text-align:center">
+              		<button class="btn btn-primary" type="button"
+              		onclick="Swal.fire('Call or send a text to  07068285967')">Click here to contact the admin</button>
+              		<img src="/static/img/contactadmin.png" class="img-fluid"style="height:50vh;text-align:center">
+            	</div>
+             
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    {%endblock content %}
+     
